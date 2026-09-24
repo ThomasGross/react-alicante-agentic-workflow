@@ -14,6 +14,7 @@ function session(overrides: Partial<Session> = {}): Session {
     startTime: "09:00",
     durationMinutes: 45,
     description: "",
+    level: "beginner",
     ...overrides,
   };
 }
