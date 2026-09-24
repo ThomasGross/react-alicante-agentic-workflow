@@ -4,8 +4,13 @@
     "schedule": "Horario",
     "stats": "Estadísticas",
     "news": "Noticias",
+    "speakers": "Ponentes",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú"
+  },
+  "SpeakersPage": {
+    "heading": "Ponentes",
+    "subheading": "Todos los ponentes de React Alicante y sus sesiones."
   },
   "Hero": {
     "heading": "Guía de la conferencia React Alicante",
