@@ -19,6 +19,7 @@ export function SiteNav() {
     { href: "/sessions", label: t("schedule") },
     ...(isStatsEnabled ? [{ href: "/stats", label: t("stats") }] : []),
     { href: "/news", label: t("news") },
+    { href: "/speakers", label: t("speakers") },
   ];
 
   return (
