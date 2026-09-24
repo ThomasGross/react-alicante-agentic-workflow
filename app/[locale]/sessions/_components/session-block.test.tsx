@@ -14,6 +14,7 @@ const session: Session = {
   startTime: "09:00",
   durationMinutes: 45,
   description: "",
+  level: "beginner",
 };
 
 describe("SessionBlock", () => {
@@ -21,7 +22,9 @@ describe("SessionBlock", () => {
     render(<SessionBlock session={session} top={0} height={72} />);
 
     expect(screen.getByText("Opening Keynote")).toBeInTheDocument();
-    expect(screen.getByText("09:00 · Marta Fernandez")).toBeInTheDocument();
+    expect(
+      screen.getByText("09:00 · Marta Fernandez · beginner"),
+    ).toBeInTheDocument();
   });
 
   it("links to the session page", () => {
