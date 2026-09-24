@@ -15,10 +15,11 @@ type SelectedSessionRow = Pick<
   | "start_time"
   | "duration_minutes"
   | "description"
+  | "level"
 >;
 
 const SESSION_COLUMNS =
-  "id, title, speaker, track, room, start_time, duration_minutes, description";
+  "id, title, speaker, track, room, start_time, duration_minutes, description, level";
 
 /**
  * Codes for "this table does not exist": Postgres `undefined_table` (42P01) and
@@ -41,6 +42,7 @@ function toSession(row: SelectedSessionRow): Session {
     speaker: row.speaker,
     track: row.track,
     room: row.room,
+    level: row.level,
     // Postgres `time` comes back as "09:00:00"; the UI works in "HH:MM".
     startTime: row.start_time.slice(0, 5),
     durationMinutes: row.duration_minutes,

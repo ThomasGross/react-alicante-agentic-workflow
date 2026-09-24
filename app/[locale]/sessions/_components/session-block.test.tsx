@@ -14,6 +14,7 @@ const session: Session = {
   startTime: "09:00",
   durationMinutes: 45,
   description: "",
+  level: "beginner",
 };
 
 describe("SessionBlock", () => {
