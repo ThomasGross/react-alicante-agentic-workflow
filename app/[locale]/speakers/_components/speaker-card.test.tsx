@@ -52,7 +52,7 @@ describe("SpeakerCard", () => {
     expect(screen.getByText("17:00")).toBeInTheDocument();
   });
 
-  it("links each session title to its session page", () => {
+  it("links each session title to its session page with a descriptive label", () => {
     render(
       <SpeakerCard
         speaker="Marta Fernandez"
@@ -60,7 +60,10 @@ describe("SpeakerCard", () => {
       />,
     );
 
-    const link = screen.getByRole("link", { name: "Opening Keynote" });
+    // aria-label disambiguates same-titled sessions across different speakers.
+    const link = screen.getByRole("link", {
+      name: "Opening Keynote — Marta Fernandez",
+    });
     expect(link).toHaveAttribute("href", "/en/sessions/opening-keynote");
   });
 
