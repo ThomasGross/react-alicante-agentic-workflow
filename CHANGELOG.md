@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.4.0] — 2026-09-24
+
+### Features
+
+- feat(sessions): show each session's level (#5)
+- feat(speakers): add /speakers page listing all speakers and their sessions
+
+### Bug Fixes
+
+- fix(speakers): call setRequestLocale to allow static prerendering
+- fix(speakers): address WCAG 2.1 AA findings from accessibility audit
+
+### Maintenance
+
+- chore(release): bump version to 0.4.0
+
+## Test Suite
+
+| Suite          | Status     |
+| -------------- | ---------- |
+| ESLint         | ⏳ pending |
+| Type-check     | ⏳ pending |
+| Unit tests     | ⏳ pending |
+| Build (Vercel) | ⏳ pending |
+
+CI: pending — will run once the release branch is pushed
+
 ## [0.3.1] — 2026-09-24
 
 ### Bug Fixes
