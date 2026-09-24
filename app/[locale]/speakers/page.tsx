@@ -3,9 +3,15 @@ import { PageHeading } from "@/components/atoms/page-heading";
 import { fetchSessions } from "@/services/sessions";
 import { groupSessionsBySpeaker } from "@/utils/speaker-sessions";
 import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export default async function SpeakersPage() {
+export default async function SpeakersPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("SpeakersPage");
   const sessions = await fetchSessions();
   const speakers = groupSessionsBySpeaker(sessions);
